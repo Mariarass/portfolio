@@ -3,7 +3,6 @@
 }
 
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
 }
 
@@ -26,6 +25,11 @@
 
 .App-link {
   color: #61dafb;
+}
+
+@font-face {
+  font-family: 'HeaderFont';
+  src: url('./assets/fonts/aexpective.ttf') format('truetype');
 }
 
 @keyframes App-logo-spin {
