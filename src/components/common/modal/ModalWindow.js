@@ -1,14 +1,20 @@
 import React from 'react';
-import s from './Modal.module.css'
-const ModalWindow = ({isOpen,children}) => {
-    return (isOpen&&
-        <div className={s.container}>
+import s from './Modal.module.css';
 
-        <div className={s.modal}>
-            {children}
-        </div>
+const ModalWindow = ({ isOpen, setOpen, children }) => {
+    const handleClick = (e) => {
+        e.stopPropagation();
+        setOpen(false);
+    };
 
-        </div>
+    return (
+        isOpen && (
+            <div className={s.container} onClick={handleClick}>
+                <div className={s.modal}>
+                    {children}
+                </div>
+            </div>
+        )
     );
 };
 
